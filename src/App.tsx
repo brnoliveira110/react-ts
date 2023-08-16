@@ -1,20 +1,13 @@
 import React from "react";
-import { Input } from "./Input";
+import ButtonType from "./ButtonType";
 
 function App() {
-  const [data, setData] = React.useState("")
+  const [total, setTotal] = React.useState(0)
   return (
     <div>
-      <p>Início da viagem: {data}</p>
-      <Input id="email" label="E-mail" type="email" />
-      <Input id="nome" label="Nome" type="text" />
-      <Input 
-        id="inicio_de_viagem" 
-        label="Início da viagem" 
-        type="date"  
-        value={data} 
-        onChange={(event)=> setData(event.currentTarget.value)}/>
-      <Input id="horario" label="Horário" type="time" />
+      <p>Total:{total}</p>
+      <ButtonType total={total} setTotal={setTotal}/>
+
     </div>
   );
 }
