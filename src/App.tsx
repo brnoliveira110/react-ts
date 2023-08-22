@@ -1,12 +1,10 @@
 import React from "react";
-import ButtonType from "./ButtonType";
+import Checkbox from "./Checkbox";
 
 function App() {
-  const [total, setTotal] = React.useState(0)
   return (
     <div>
-      <p>Total:{total}</p>
-      <ButtonType total={total} setTotal={setTotal}/>
+     <Checkbox label="Termos e Condições"/> 
 
     </div>
   );
